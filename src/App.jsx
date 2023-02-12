@@ -1,14 +1,19 @@
-
+import './styles.css'
 function App () {
   return (
     <>
       <header>
         <img src='logo.svg' alt='Shortly, a tool to shorten urls' />
         <nav />
+        <div className='hamburger-button'>
+          <div className='horizontal-line' />
+          <div className='horizontal-line' />
+          <div className='horizontal-line' />
+        </div>
       </header>
       <main>
-        <section>
-          <img src='illustration-working.svg' alt='A draw showing a person in front of a computer' />
+        <section className='banner-container'>
+          <img className='banner-image' src='illustration-working.svg' alt='A draw showing a person in front of a computer' />
           <div>
             <h1>More than just shorter links</h1>
             <p>Build your brand&apos;s recognition and get detailed insights
