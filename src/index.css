@@ -15,8 +15,9 @@
   /* Typohraphy */
     --font-size: 18px;
       font-family: 'Poppins', sans-serif;
-    --font-weigth1: 500;
-    --font-weigth1: 700;
+    --font-weight1: 500;
+    --font-weight2: 700;
+    background-color: whitesmoke;
 }
 
 html, body, main{
@@ -25,4 +26,5 @@ html, body, main{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-size: var(--font-size);
 }

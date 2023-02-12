@@ -11,10 +11,11 @@ function App () {
           <div className='horizontal-line' />
         </div>
       </header>
+
       <main>
         <section className='banner-container'>
-          <img className='banner-image' src='illustration-working.svg' alt='A draw showing a person in front of a computer' />
-          <div>
+          <img src='illustration-working.svg' alt='A draw showing a person in front of a computer' />
+          <div className='banner-container inside'>
             <h1>More than just shorter links</h1>
             <p>Build your brand&apos;s recognition and get detailed insights
               on how your links are performing.
@@ -24,13 +25,17 @@ function App () {
         </section>
 
         <section>
-          <form>
-            <input type='text' placeholder='Shorten a link here...' />
-            <button>Shorten It!</button>
-          </form>
+          <div className='form-container'>
+            <form>
+              <div className='bg-form' />
+
+              <input type='text' placeholder='Shorten a link here...' />
+              <button>Shorten It!</button>
+            </form>
+          </div>
         </section>
 
-        <section>
+        <section className='advance-statistics'>
           <h2>Advanced Statistics</h2>
           <p>
             Track how your links are performing across the web with our
@@ -56,7 +61,7 @@ function App () {
           </div>
         </section>
       </main>
-      <footer>
+      {/* <footer>
         <img src='logo.svg' alt='Shortly, a tool to shorten urls' />
         <nav>
           <ul>
@@ -86,8 +91,8 @@ function App () {
 
           </ul>
         </nav>
-      </footer>
-      <div class='attribution' style={{ display: 'none' }}>
+  </footer> */}
+      <div className='attribution' style={{ display: 'none' }}>
         Challenge by <a href='https://www.frontendmentor.io?ref=challenge' target='_blank' rel='noreferrer'>Frontend Mentor</a>.
         Coded by <a href='#'>Your Name Here</a>.
       </div>

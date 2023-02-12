@@ -1,32 +1,139 @@
+:root{
+  --padding-left-right: 25px;
+}
+
+.advance-statistics {
+  display: grid;
+  place-items: center;
+  padding: 80px var(--padding-left-right);
+}
+
+.advance-statistics h2, p {
+  margin: 0;
+}
+
+.advance-statistics p {
+  padding-top: 20px;
+  text-align: center;
+  color: var(--Grayish-Violet)
+}
+
+.banner-container{
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.banner-container .inside{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.banner-container .inside h1{
+  font-size: 42px;
+  line-height: 47px;
+  margin: 0;
+  padding: 0;
+}
+
+.banner-container .inside p{
+  color: var(--Grayish-Violet);
+  font-weight: var(--font-weight1);
+  margin: 0;
+  padding: 0 var(--padding-left-right);
+}
+
+.banner-container .inside button{
+  background-color: var(--Cyan);
+  border-radius: 35px;
+  border: 0;
+  color: white;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight2);
+  padding: 15px 45px;
+}
+
+.banner-container img{
+  height: auto;
+  padding-left: var(--padding-left-right);
+  object-fit: cover;
+  position: relative;
+  width: 500px;
+}
+
+.form-container {
+  max-width: 100vw;
+  overflow: hidden;
+  padding: 0 var(--padding-left-right);
+}
+
+.bg-form {
+  background-image: url('bg-shorten-mobile.svg');
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-position: top right;
+}
+
+.form-container form {
+  align-items: center;
+  background-color: var(--Dark-Violet);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 125px;
+  justify-content: center;
+  margin-top: 75px;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.form-container form button{
+  background-color: var(--Cyan);
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight2);
+  padding: 10px 0;
+  width: 90%;
+  z-index: 1;
+}
+
+.form-container form input{
+  border-radius: 5px;
+  color: var(--Gray);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  padding: 10px 5%;
+  text-align: left;
+  width: 80%;
+  z-index: 1;
+}
+
 .hamburger-button{
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
+
 .horizontal-line{
+  background-color: var(--Grayish-Violet);
   height: 3px;
   width: 25px;
-  background-color: var(--Grayish-Violet);
 }
 
 header{
+  border: 1px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  padding: 35px var(--padding-left-right) 15px var(--padding-left-right);
   width: 100vw;
-  padding: 35px 25px 15px 25px;
-  border: 1px;
 }
 
-.banner-container{
-  overflow: hidden;
-  max-width: 100vw;
-}
-
-.banner-image{
-  position: relative;
-  left: 35px;
-  width: 500px;
-  height: auto;
-  object-fit: cover;
-}
