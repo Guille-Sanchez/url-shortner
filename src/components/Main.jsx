@@ -1,4 +1,5 @@
 import GetStartedButton from './GetStartedButton'
+import ShortenLinkForm from './ShortenLinkForm'
 
 function Main () {
   return (
@@ -14,16 +15,7 @@ function Main () {
         </div>
       </section>
 
-      <section>
-        <div className='form-container'>
-          <form>
-            <div className='bg-form' />
-
-            <input type='text' placeholder='Shorten a link here...' />
-            <button>Shorten It!</button>
-          </form>
-        </div>
-      </section>
+      <ShortenLinkForm />
 
       <section className='advance-statistics'>
         <h2>Advanced Statistics</h2>
@@ -55,7 +47,7 @@ function Main () {
         <div className='second-banner'>
           <div className='second-banner-top-bg' />
           <h2>Boost your links today</h2>
-          <button>Get Started</button>
+          <GetStartedButton />
         </div>
       </section>
     </main>

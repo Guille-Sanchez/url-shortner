@@ -118,11 +118,11 @@
 }
 
 .hamburger-button{
+  background-color: inherit;
+  border: 0;
   display: flex;
   flex-direction: column;
   gap: 6px;
-  border: 0;
-  background-color: inherit;
 }
 
 .hamburger-button:hover {
@@ -149,16 +149,65 @@ header{
   overflow: hidden;
 }
 
-.mobile-nav-show {
-  box-sizing: border-box;
-  background-color: var(--Dark-Violet);
-  width: calc(100% - 40px);
-  margin: 0 20px;
-  border-radius: 10px;
-  padding: 35px 0;
+.link-card {
+  background-color: white;
   display: grid;
+  margin: 20px 35px;
+  overflow: hidden;
+  padding: 10px;
   place-items: center;
+}
 
+.link-card button {
+  width: 100%;
+  padding: 10px 0;
+  color: whitesmoke;
+  font-size: 16px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border-style: none;
+}
+
+.link-card button:hover {
+  cursor: pointer;
+}
+
+.link-card .copy {
+  background-color: var(--Cyan);
+}
+
+.link-card .copied {
+  background-color: var(--Dark-Violet);
+}
+
+.link-card hr {
+  width: 100%;
+}
+
+.link-card .original-link {
+  display: -webkit-box;
+  font-size: 16px;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  width: 100%;
+}
+
+.link-card .short-link {
+  font-size: 16px;
+  color: var(--Cyan)
+}
+
+
+.mobile-nav-show {
+  background-color: var(--Dark-Violet);
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: grid;
+  margin: 0 20px;
+  padding: 35px 0;
+  place-items: center;
+  width: calc(100% - 40px);
 }
 
 .mobile-nav-hide {
@@ -166,8 +215,8 @@ header{
 }
 
 .mobile-nav-show > div {
-  width: 100%;
   position: relative;
+  width: 100%;
 } 
 
 .mobile-nav-show {
@@ -176,24 +225,24 @@ header{
 }
 
 .mobile-nav-show ul {
-  width: 100%;
+  display: grid;
+  gap: 25px;
   margin: 0;
   padding: 0;
-  display: grid;
   place-items: center;
-  gap: 25px;
+  width: 100%;
 }
 
 .mobile-nav-show li{
-  width: 100%;
   list-style: none;
   text-align: center;
+  width: 100%;
 }
 
 .mobile-nav-show a {
-  text-decoration: none;
   color: whitesmoke;
   font-weight: var(--font-weight2);
+  text-decoration: none;
 }
 
 .mobile-nav-show hr{
@@ -253,8 +302,8 @@ header{
 
 .second-banner h2 {
   color: white;
-  padding: 0;
   margin: 0;
+  padding: 0;
   z-index: 1;
 }
 
@@ -290,11 +339,11 @@ footer nav{
 }
 
 footer ul {
-  list-style: none;
   display: grid;
-  place-items: center;
   gap: 10px;
+  list-style: none;
   margin: 0;
+  place-items: center;
   padding: 0;
 }
 
@@ -310,12 +359,12 @@ footer li a {
 }
 
  .media-icons {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
+   display: flex;
+   gap: 30px;
+   justify-content: center;
+   margin: 0;
+   padding: 0;
+   width: 100vw;
 }
 
 .media-icons:hover{
