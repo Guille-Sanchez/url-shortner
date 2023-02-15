@@ -1,9 +1,9 @@
 import { useRef, useState } from 'react'
-import LinkCard from './LinkCard.jsx'
+// import LinkCard from './LinkCard.jsx'
+import ListLinkCards from './ListLinkCards.jsx'
 import validURL from './moockups/validURL.json'
 
 function ShortenLinkForm () {
-  // const [userURL, setUserURL] = useState('')
   const [userURL, setUserURL] = useState({ short_link: '', original_link: '' })
   const linkToShort = useRef('')
 
@@ -15,12 +15,10 @@ function ShortenLinkForm () {
     const URL_INFO = validURL
     const shortLink = { short_link: URL_INFO.result.full_short_link, original_link: URL_INFO.result.original_link }
     setUserURL((prev) => ({ ...prev, ...shortLink }))
-    console.log(shortLink)
   }
 
   function verifyUrl (e) {
     linkToShort.current = e.target.value
-    console.log(linkToShort.current)
   }
 
   function onSubmitLink (e) {
@@ -37,7 +35,7 @@ function ShortenLinkForm () {
           <button type='submit'>Shorten It!</button>
         </form>
       </div>
-      {userURL?.short_link && <LinkCard userURL={userURL} />}
+      {userURL?.short_link && <ListLinkCards userURL={userURL} />}
     </section>
   )
 }
