@@ -2,24 +2,28 @@ import { useEffect, useState } from 'react'
 import LinkCard from './LinkCard.jsx'
 
 function ListLinkCards ({ userURL }) {
+  console.log('hola')
   const [allUserLinkCards, setAllUserLinkCards] = useState([])
+  const userLinks = [...allUserLinkCards]
 
-  /* useEffect(() => {
-    let storedLinks = window.localStorage.getItem('userLinks')
-    if (storedLinks) {
-      storedLinks = JSON.parse(storedLinks)
-      storedLinks.map(item => console.log(`userlinks=${item}`))
-      setAllUserLinkCards((prev) => [...prev, ...storedLinks])
+  useEffect(() => {
+    let storedURLs = window.localStorage.getItem('userLinks')
+    if (storedURLs && allUserLinkCards.length === 0) {
+      storedURLs = JSON.parse(storedURLs)
+      storedURLs.map(item => console.log(`userlinks=${item}`))
+      console.log('reads value')
+      setAllUserLinkCards((prev) => [...prev, ...storedURLs])
+      console.log('deletes value')
       window.localStorage.removeItem('userLinks')
     }
-  }, []) */
+  }, [])
 
   useEffect(() => {
     let subscribed = true
 
     if (subscribed) {
-      const userLinks = [...allUserLinkCards, { ...userURL }]
-      window.localStorage.setItem('userLinks', JSON.stringify(userLinks))
+      const links = [...allUserLinkCards, { ...userURL }]
+      window.localStorage.setItem('userLinks', JSON.stringify(links))
       setAllUserLinkCards((prev) => [...prev, { ...userURL }])
     }
     return () => {
@@ -31,7 +35,7 @@ function ListLinkCards ({ userURL }) {
   return (
     <>
       {
-        allUserLinkCards?.map((cards, index) => {
+        userLinks?.map((cards, index) => {
           return (
             <LinkCard key={index} userURL={cards} />
           )

@@ -1,4 +1,6 @@
+import URLsContextProvider from '../context/URLsContext'
 import GetStartedButton from './GetStartedButton'
+import ListLinkCards from './ListLinkCards'
 import ShortenLinkForm from './ShortenLinkForm'
 
 function Main () {
@@ -15,7 +17,12 @@ function Main () {
         </div>
       </section>
 
-      <ShortenLinkForm />
+      <section>
+        <URLsContextProvider>
+          <ShortenLinkForm />
+          <ListLinkCards />
+        </URLsContextProvider>
+      </section>
 
       <section className='advance-statistics'>
         <h2>Advanced Statistics</h2>

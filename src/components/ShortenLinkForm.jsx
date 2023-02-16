@@ -1,10 +1,9 @@
-import { useRef, useState } from 'react'
-// import LinkCard from './LinkCard.jsx'
-import ListLinkCards from './ListLinkCards.jsx'
+import { useContext, useRef } from 'react'
+import { userURLContext } from '../context/URLsContext'
 import validURL from './moockups/validURL.json'
 
 function ShortenLinkForm () {
-  const [userURL, setUserURL] = useState({ short_link: '', original_link: '' })
+  const setUserURL = useContext(userURLContext)
   const linkToShort = useRef('')
 
   function obtainShortenLink () {
@@ -35,7 +34,6 @@ function ShortenLinkForm () {
           <button type='submit'>Shorten It!</button>
         </form>
       </div>
-      {userURL?.short_link && <ListLinkCards userURL={userURL} />}
     </section>
   )
 }
