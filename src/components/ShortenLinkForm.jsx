@@ -3,7 +3,7 @@ import { userURLContext } from '../context/URLsContext'
 import validURL from './moockups/validURL.json'
 
 function ShortenLinkForm () {
-  const setUserURL = useContext(userURLContext)
+  const { setUserURL } = useContext(userURLContext)
   const linkToShort = useRef('')
 
   function obtainShortenLink () {
@@ -29,7 +29,6 @@ function ShortenLinkForm () {
       <div className='form-container'>
         <form onSubmit={onSubmitLink}>
           <div className='bg-form' />
-
           <input onChange={verifyUrl} type='text' placeholder='Shorten a link here...' />
           <button type='submit'>Shorten It!</button>
         </form>
