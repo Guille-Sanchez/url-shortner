@@ -1,23 +1,15 @@
 import URLsContextProvider from '../context/URLsContext'
 import GetStartedButton from './GetStartedButton'
+import { HeroHeader } from './HeroHeader'
 import ListLinkCards from './ListLinkCards'
 import ShortenLinkForm from './ShortenLinkForm'
+import StatisticsCard from './StatisticsCard'
 
 function Main () {
   return (
     <main>
-      <section className='banner-container'>
-        <img src='illustration-working.svg' alt='A draw showing a person in front of a computer' />
-        <div className='banner-container inside'>
-          <h1>More than just shorter links</h1>
-          <p>Build your brand&apos;s recognition and get detailed insights
-            on how your links are performing.
-          </p>
-          <GetStartedButton />
-        </div>
-      </section>
-
-      <section>
+      <HeroHeader />
+      <section className='form-section'>
         <URLsContextProvider>
           <ShortenLinkForm />
           <ListLinkCards />
@@ -33,21 +25,7 @@ function Main () {
       </section>
 
       <section>
-        <div className='statistics-card'>
-          <div className='traslate-bg-top'>
-            <div className='image-container'>
-              <img src='icon-brand-recognition.svg' alt='Brand Recognition' />
-            </div>
-          </div>
-
-          <div className='information'>
-            <h2 style={{ margin: 0, padding: '30px 0 20px 0' }}>Brand Recognition</h2>
-            <p>
-              Boost your brand recognition with each click. Generic links don&apos;t
-              mean a thing. Branded links help instil confidence in your content.
-            </p>
-          </div>
-        </div>
+        <StatisticsCard />
       </section>
 
       <section>

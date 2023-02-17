@@ -1,6 +1,6 @@
 import { useContext, useRef } from 'react'
 import { userURLContext } from '../context/URLsContext'
-import validURL from './moockups/validURL.json'
+import validURL from '../moockups/validURL.json'
 
 function ShortenLinkForm () {
   const { setUserURL } = useContext(userURLContext)
