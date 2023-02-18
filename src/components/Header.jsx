@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { DesktopNav } from './DesktopNav'
 import { MobileNav } from './MobileNav'
 
 function Header () {
@@ -11,7 +12,7 @@ function Header () {
     <>
       <header>
         <img src='logo.svg' alt='Shortly, a tool to shorten urls' />
-        <nav />
+        <DesktopNav />
 
         <button className='hamburger-button' onClick={showNav}>
           <div className='horizontal-line' />

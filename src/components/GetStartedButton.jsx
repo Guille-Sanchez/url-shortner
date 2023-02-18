@@ -1,6 +1,6 @@
 function GetStartedButton () {
   return (
-    <button>Get Started</button>
+    <button className='btn-get-started'>Get Started</button>
   )
 }
 

@@ -28,12 +28,3 @@ html, body {
   box-sizing: border-box;
   font-size: var(--font-size);
 }
-
-@media (min-width: 1250px) {
-  html, body {
-    display: grid;
-    place-items: center;
-  }
-}
-
-
