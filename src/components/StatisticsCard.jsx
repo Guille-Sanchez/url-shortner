@@ -20,32 +20,31 @@ function StatisticsCard () {
   ]
   const cardsIndex = useRef(0)
   return (
-    <>
-      <div className='statistics-container'>
-        {cards.map((card, index) => {
-          cardsIndex.current = index + 1
-          return (
-            <div key={card.title}>
-              <div className='statistics-card'>
-                <div className='traslate-bg-top'>
-                  <div className='image-container'>
-                    <img src={card.image} alt={card.title} />
-                  </div>
-                </div>
-
-                <div className='information'>
-                  <h2 style={{ margin: 0, padding: '30px 0 20px 0' }}>{card.title}</h2>
-                  <p>
-                    {card.body}
-                  </p>
+    <div className='statistics-container'>
+      {cards.map((card, index) => {
+        cardsIndex.current = index + 1
+        return (
+          <div key={card.title} style={{ position: 'relative' }}>
+            <div className={`statistics-card ${card.title.toLowerCase().split(' ').join('-')}`}>
+              <div className='traslate-bg-top'>
+                <div className='image-container'>
+                  <img src={card.image} alt={card.title} />
                 </div>
               </div>
-              {(cardsIndex.current < cards.length) && <div className='join-line' />}
+
+              <div className='information'>
+                <h2 style={{ margin: 0, padding: '30px 0 20px 0' }}>{card.title}</h2>
+                <p>
+                  {card.body}
+                </p>
+              </div>
             </div>
-          )
-        })}
-      </div>
-    </>
+            {(cardsIndex.current < cards.length) && <div className='join-line' />}
+          </div>
+        )
+      })}
+    </div>
+
   )
 }
 

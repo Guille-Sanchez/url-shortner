@@ -4,6 +4,7 @@ function Footer () {
   return (
     <footer>
       <img src='logo-footer.svg' alt='Shortly, a tool to shorten urls' />
+
       <nav>
         <ul>
           <li><h3>Features</h3></li>
@@ -11,12 +12,14 @@ function Footer () {
           <li><a href='#'>Branded Links</a></li>
           <li><a href='#'>Analytics</a></li>
         </ul>
+
         <ul>
           <li><h3>Resources</h3></li>
           <li><a href='#'>Blog</a></li>
           <li><a href='#'>Developers</a></li>
           <li><a href='#'>Support</a></li>
         </ul>
+
         <ul>
           <li><h3>Company</h3></li>
           <li><a href='#'>About</a></li>
