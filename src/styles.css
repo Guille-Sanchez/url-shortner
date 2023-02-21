@@ -66,6 +66,10 @@
   filter: brightness(130%);
 }
 
+.btn-delete {
+  background-color: rgb(206, 1, 1);
+}
+
 .banner-container .hero-image {
   display: flex;
   justify-content: end;
@@ -217,10 +221,18 @@ header {
 .link-card {
   background-color: white;
   display: grid;
+  gap: 10px;
   margin: 20px 35px;
   overflow: hidden;
   padding: 10px;
   place-items: center;
+}
+
+.link-card .btn {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  justify-content: space-evenly;
 }
 
 .link-card button {
@@ -230,7 +242,7 @@ header {
   font-size: 16px;
   margin: 10px 0;
   padding: 10px 0;
-  width: 100%;
+  width: clamp(150px, 100%, 290px);
 }
 
 .link-card button:hover {
@@ -607,6 +619,11 @@ header {
   .link-card > * {
     font-size: clamp(1rem, 0.8751rem + 0.5330vw, 1.5rem) !important;
     margin: 0;
+  }
+
+  .link-card button {
+    font-size: clamp(1rem, 0.8751rem + 0.5330vw, 1.5rem) !important;
+
   }
 
   .link-card hr {

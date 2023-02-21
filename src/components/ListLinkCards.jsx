@@ -15,7 +15,13 @@ function ListLinkCards () {
       {
         allUserLinkCards?.map((cards, index) => {
           return (
-            <LinkCard key={index} userURL={cards} />
+            <div key={`card-${index}`}>
+              <LinkCard
+                index={index}
+                setAllUserLinkCards={setAllUserLinkCards}
+                userURL={cards}
+              />
+            </div>
           )
         })
       }

@@ -6,11 +6,11 @@ export function useStorageToSaveURL ({ userURL }) {
 
   useEffect(() => {
     let subscribed = true
-    if (subscribed && userURL.short_link.length > 0) {
+    if (subscribed && userURL.short_link.length > 0) { // Saves links
       const links = [...allUserLinkCards, { ...userURL }]
       window.localStorage.setItem('userLinks', JSON.stringify(links))
       setAllUserLinkCards((prev) => [...prev, { ...userURL }])
-    } if (savesIfRefresh && subscribed) {
+    } if (savesIfRefresh && subscribed) { // Loads links after refreshing page
       const links = [...allUserLinkCards]
       window.localStorage.setItem('userLinks', JSON.stringify(links))
       setSavesIfRefresh(() => false)
