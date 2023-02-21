@@ -147,7 +147,7 @@ footer li a {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  height: 125px;
+  height: clamp(125px, 20%, 200px);
   justify-content: center;
   padding: 10px;
   position: relative;
@@ -166,6 +166,10 @@ footer li a {
   z-index: 1;
 }
 
+.form-container form button:hover {
+  cursor: pointer;
+}
+
 .form-container form input {
   border-radius: 5px;
   color: var(--Gray);
@@ -177,8 +181,14 @@ footer li a {
   z-index: 1;
 }
 
-.form-container form button:hover {
-  cursor: pointer;
+.form-container form p {
+  width: 90%;
+  margin-top: -10px;
+  font-size: clamp(0.9rem, 0.7515rem + 0.6337vw, 1.5rem);
+  color: red;
+  font-style: italic;
+  z-index: 1;
+  text-align: left;
 }
 
 .form-section {
