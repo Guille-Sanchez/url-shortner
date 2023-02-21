@@ -267,6 +267,7 @@ header {
 }
 
 .link-card .original-link {
+  word-break: break-all;
   display: -webkit-box;
   font-size: 16px;
   -webkit-line-clamp: 1;

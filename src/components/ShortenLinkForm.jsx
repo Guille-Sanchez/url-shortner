@@ -12,6 +12,9 @@ function ShortenLinkForm () {
 
   async function onSubmitLink (e) {
     e.preventDefault()
+    if (linkToShort?.current.length === 0) return
+    const validURL = linkToShort.current.match(/[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g) //eslint-disable-line
+    if (validURL === null) return
     const shorthenLink = await getShortenLink(linkToShort.current)
     setUserURL((prev) => ({ ...prev, ...shorthenLink }))
   }
